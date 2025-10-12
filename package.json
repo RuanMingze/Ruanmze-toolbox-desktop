@@ -1,0 +1,60 @@
+{
+  "name": "ruanmingze-toolbox",
+  "version": "1.0.0",
+  "description": "阮铭泽工具箱 - 多功能在线工具集合",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.ruanmingze.toolbox",
+    "productName": "阮铭泽工具箱",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["nsis", "zip"],
+      "icon": "icon.jpg"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "toolbox-app.html",
+      "icon.jpg",
+      "!dist/",
+      "!Ruanmingze-toolbox-server/",
+      "!django_backend/",
+      "!*.md",
+      "!test*",
+      "!*.bat",
+      "!*.ps1"
+    ]
+  },
+  "electronDownload": {
+    "mirror": "https://npmmirror.com/mirrors/electron/"
+  },
+  "keywords": [
+    "toolbox",
+    "tools",
+    "utility"
+  ],
+  "author": "阮铭泽",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^21.4.4",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "systeminformation": "^5.27.10"
+  }
+}
