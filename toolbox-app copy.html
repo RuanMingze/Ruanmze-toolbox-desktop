@@ -2139,7 +2139,45 @@ print(greet("程序员"))</textarea>
                     </div>
                 </div>
                 
-
+                <!-- 退出设置 -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span data-lang="退出设置">退出设置</span>
+                    </div>
+                    
+                    <div class="setting-option">
+                        <div class="setting-label">
+                            <i class="fas fa-question-circle"></i>
+                            <span data-lang="退出时询问">退出时询问</span>
+                        </div>
+                        <div class="select-box">
+                            <div style="display: flex; align-items: center; gap: 15px;">
+                                <label class="switch">
+                                    <input type="checkbox" id="exitConfirmToggle" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span data-lang="启用退出确认">启用退出确认</span>
+                            </div>
+                            <div style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                                <label class="switch">
+                                    <input type="checkbox" id="rememberExitChoiceToggle">
+                                    <span class="slider"></span>
+                                </label>
+                                <span data-lang="记住我的选择">记住我的选择</span>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color);">
+                                    <span data-lang="默认退出行为">默认退出行为</span>
+                                </label>
+                                <select id="defaultExitAction" class="setting-select" style="width:100%;">
+                                    <option value="exit" data-lang="完全退出">完全退出</option>
+                                    <option value="minimize" data-lang="最小化到托盘">最小化到托盘</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="card">
                     <div style="text-align: center; padding: 20px;">
@@ -2152,7 +2190,38 @@ print(greet("程序员"))</textarea>
         </div>
     </div>
     
-
+    <!-- 退出确认对话框 -->
+    <div id="exitDialog" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 400px; padding: 30px;">
+            <div style="text-align: center; margin-bottom: 25px;">
+                <i class="fas fa-question-circle" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                <h2 data-lang="退出确认" style="margin: 0;">退出确认</h2>
+                <p data-lang="您想要完全退出还是最小化到托盘？" style="margin: 10px 0 0 0; opacity: 0.8;">您想要完全退出还是最小化到托盘？</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <button id="exitAppBtn" class="tool-link" style="background: #dc3545; padding: 12px; font-size: 1.1rem;">
+                    <i class="fas fa-power-off" style="margin-right: 8px;"></i>
+                    <span data-lang="完全退出">完全退出</span>
+                </button>
+                
+                <button id="minimizeToTrayBtn" class="tool-link" style="background: var(--primary-color); padding: 12px; font-size: 1.1rem;">
+                    <i class="fas fa-window-minimize" style="margin-right: 8px;"></i>
+                    <span data-lang="最小化到托盘">最小化到托盘</span>
+                </button>
+                
+                <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+                    <input type="checkbox" id="rememberExitChoice" style="width: 18px; height: 18px;">
+                    <label for="rememberExitChoice" data-lang="记住我的选择" style="font-size: 0.9rem;">记住我的选择</label>
+                </div>
+                
+                <button id="cancelExitBtn" class="tool-link" style="background: #6c757d; padding: 10px; font-size: 1rem; margin-top: 10px;">
+                    <i class="fas fa-times" style="margin-right: 8px;"></i>
+                    <span data-lang="取消">取消</span>
+                </button>
+            </div>
+        </div>
+    </div>
     
     <!-- 软件逆向标签页 -->
     <div id="reverse" class="tab-content">
@@ -6139,7 +6208,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.electronAPI.closeWindow();
             } else {
                 // 在非Electron环境中使用浏览器API
-                window.close();
+                if (confirm('您确定要关闭此页面吗？')) {
+                    window.close();
+                }
             }
         });
     }
@@ -6175,7 +6246,111 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-
+    // 退出确认对话框相关功能
+    const exitDialog = document.getElementById('exitDialog');
+    const exitAppBtn = document.getElementById('exitAppBtn');
+    const minimizeToTrayBtn = document.getElementById('minimizeToTrayBtn');
+    const cancelExitBtn = document.getElementById('cancelExitBtn');
+    const rememberExitChoice = document.getElementById('rememberExitChoice');
+    const exitConfirmToggle = document.getElementById('exitConfirmToggle');
+    const rememberExitChoiceToggle = document.getElementById('rememberExitChoiceToggle');
+    const defaultExitAction = document.getElementById('defaultExitAction');
+    
+    // 从Cookie加载设置
+    function loadExitSettings() {
+        const confirmEnabled = getCookie("exitConfirmEnabled");
+        const rememberChoice = getCookie("rememberExitChoice");
+        const defaultAction = getCookie("defaultExitAction");
+        
+        if (confirmEnabled !== null) {
+            exitConfirmToggle.checked = confirmEnabled === "true";
+        }
+        
+        if (rememberChoice !== null) {
+            rememberExitChoiceToggle.checked = rememberChoice === "true";
+        }
+        
+        if (defaultAction) {
+            defaultExitAction.value = defaultAction;
+        }
+    }
+    
+    // 保存设置到Cookie
+    function saveExitSettings() {
+        setCookie("exitConfirmEnabled", exitConfirmToggle.checked, 365);
+        setCookie("rememberExitChoice", rememberExitChoiceToggle.checked, 365);
+        setCookie("defaultExitAction", defaultExitAction.value, 365);
+    }
+    
+    // 初始化退出设置
+    loadExitSettings();
+    
+    // 监听设置变化
+    exitConfirmToggle.addEventListener('change', saveExitSettings);
+    rememberExitChoiceToggle.addEventListener('change', saveExitSettings);
+    defaultExitAction.addEventListener('change', saveExitSettings);
+    
+    // 监听退出确认对话框按钮
+    exitAppBtn.addEventListener('click', function() {
+        // 如果用户选择记住选择
+        if (rememberExitChoice.checked) {
+            setCookie("rememberExitChoice", "true", 365);
+            setCookie("defaultExitAction", "exit", 365);
+        }
+        
+        // 关闭对话框
+        exitDialog.style.display = 'none';
+        
+        // 完全退出应用
+        window.electronAPI.closeWindow();
+    });
+    
+    minimizeToTrayBtn.addEventListener('click', function() {
+        // 如果用户选择记住选择
+        if (rememberExitChoice.checked) {
+            setCookie("rememberExitChoice", "true", 365);
+            setCookie("defaultExitAction", "minimize", 365);
+        }
+        
+        // 关闭对话框
+        exitDialog.style.display = 'none';
+        
+        // 最小化到托盘
+        window.electronAPI.minimizeWindow();
+    });
+    
+    cancelExitBtn.addEventListener('click', function() {
+        // 关闭对话框
+        exitDialog.style.display = 'none';
+    });
+    
+    // 监听来自主进程的显示退出对话框请求
+    if (window.electronAPI) {
+        window.electronAPI.onShowExitDialog(() => {
+            // 检查是否启用了退出确认
+            const confirmEnabled = getCookie("exitConfirmEnabled");
+            const rememberChoice = getCookie("rememberExitChoice");
+            const defaultAction = getCookie("defaultExitAction");
+            
+            // 如果禁用了退出确认或记住了选择，则直接执行默认操作
+            if (confirmEnabled === "false" || rememberChoice === "true") {
+                if (defaultAction === "minimize") {
+                    window.electronAPI.minimizeWindow();
+                } else {
+                    window.electronAPI.closeWindow();
+                }
+                return;
+            }
+            
+            // 显示退出确认对话框
+            exitDialog.style.display = 'flex';
+        });
+    } else {
+        // 在非Electron环境中隐藏退出确认相关元素
+        if (exitDialog) {
+            exitDialog.style.display = 'none';
+        }
+    }
     // AI聊天功能实现
     function initAIChat() {
         // 获取相关元素
