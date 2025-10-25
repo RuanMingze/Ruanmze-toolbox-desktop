@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<installer>
+	<component cid="com.installer.template" type="common" upgrade="1">
+		<item name="icversion" value="100000" />
+		<item name="templateid" value="50000" />
+		<item name="templatetype" value="1" />
+		<item name="basetemplate" value="50000" />
+		<item name="templateversion" value="1" />
+		<item name="compatible_templateversion" value="1" />
+	</component>
+	<component cid="com.installer.appconfigures" type="common" upgrade="1">
+		<item name="ns_app_displayname" value="阮铭泽工具箱" enable="1" />
+		<item name="ns_app_internalname" value="Ruanmtoolbox" enable="1" />
+		<item name="ns_app_only_one" value="1" enable="1" />
+		<item name="ns_app_version" value="1.0.0.0" enable="1" />
+		<item name="ns_app_publisher" value="Ruanm，Inc." enable="1" />
+		<item name="ns_app_legal" value="Copyrights (c). All rights reserved." enable="1" />
+		<item name="ns_ins_uninstall_old" value="0" enable="1" />
+		<item name="ns_ins_uninstall_showtip" value="1" enable="1" />
+		<item name="ns_ins_uninstall_old_keepfiles" value="" enable="1" />
+		<item name="ins_uninstall_old_kfs_notoverwrite" value="0" enable="1" />
+		<item name="ns_ins_mainexe" value="阮铭泽工具箱.exe" enable="1" />
+		<item name="ns_ins_mainexe_displayname" value="阮铭泽工具箱" enable="1" />
+		<item name="ns_ins_online_url" value="" enable="1" />
+		<item name="ns_ins_installedapp_path" value="C:/Users/xukf2/Desktop/Ruanm/阮铭泽工具箱/dist/win-unpacked" enable="1" />
+		<item name="ns_ins_installedapp_compresslevel" value="4" enable="1" />
+		<item name="lang_support" value="en,zh_CN" enable="1" />
+		<item name="lang_default" value="zh_CN" enable="1" />
+		<item name="lang_usesys" value="1" enable="1" />
+		<item name="ins_installer_type" value="0" enable="1" />
+		<item name="ins_installer_bitness" value="64" enable="1" />
+		<item name="ins_install_silence" value="0" enable="1" />
+		<item name="ins_install_dir" value="C:\Program Files\Ruanm\Toolbox" enable="1" />
+		<item name="ins_install_dir_only" value="0" enable="1" />
+		<item name="ins_restart_afterinstall" value="0" enable="1" />
+		<item name="ins_offline_useisdata" value="0" enable="1" />
+		<item name="ins_package_size" value="262144000" enable="1" />
+		<item name="ins_checkmainexe_beforeinstall" value="1" enable="1" />
+		<item name="ins_mainexe_startuplnk" value="1" enable="1" />
+		<item name="ins_show_killmainexe_tip" value="0" enable="1" />
+		<item name="ins_supported_os_min" value="6,5" enable="1" />
+		<item name="ins_supported_os_winserver" value="1" enable="1" />
+		<item name="ins_supported_os_bitness" value="32,64" enable="1" />
+		<item name="ins_runmainexe_afterinstall" value="0" enable="1" />
+		<item name="ins_end_op_type" value="0" enable="1" />
+		<item name="ins_end_op_path" value="your_launch_app.exe" enable="1" />
+		<item name="ins_end_op_slience_enable" value="0" enable="1" />
+		<item name="ins_ui_fullscreen" value="0" enable="1" />
+		<item name="ins_showcustom_default" value="0" enable="1" />
+		<item name="ins_custom_isfloat" value="0" enable="1" />
+		<item name="ins_floatcustom_height" value="0" enable="0" />
+		<item name="ins_bottom_hidecustom_height" value="140" enable="1" />
+		<item name="ins_bottom_showcustom_height" value="195" enable="1" />
+		<item name="ins_installing_winheight" value="0" enable="0" />
+		<item name="ins_win_size" value="560,410" enable="1" />
+		<item name="ins_win_expand_height" value="55" enable="1" />
+		<item name="ins_frame_borderclr" value="0x00666666" enable="1" />
+		<item name="ins_win_trans" value="0" enable="1" />
+		<item name="ins_top_bk_imgs" value="top_bg.png" enable="1" />
+		<item name="ins_top_bk_effect" value="0" enable="1" />
+		<item name="ins_top_bk_effect_speed" value="3" enable="1" />
+		<item name="ins_top_bk_effect_staytime" value="4000" enable="1" />
+		<item name="ins_top_bk_size" value="560,270" enable="1" />
+		<item name="ins_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="ins_installed_bottom_bkimg" value="" enable="1" />
+		<item name="ins_installing_bottom_bkimg" value="" enable="1" />
+		<item name="ins_bottom_bkimg" value="" enable="1" />
+		<item name="ins_installed_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="ins_installing_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="ins_smalltitle_txt" value="[SysLocal.ProductName] [SysLocal.InstallerTitle]" enable="1" />
+		<item name="ins_smalltitle_displaypage" value="1,1,1" enable="1" />
+		<item name="ins_smalltitle_txtclr" value="0xFFFFFFFF" ftsize="14" bold="0" enable="1" />
+		<item name="ins_smalltitle_visible" value="true" enable="1" />
+		<item name="ins_smalltitle_ft" value="14" enable="1" />
+		<item name="ins_smalltitle_icon" value="" enable="1" />
+		<item name="ins_smalltitle_icon_visible" value="false" enable="1" />
+		<item name="ins_large_icon" value="design_res_app_icon.png" enable="1" />
+		<item name="ins_large_icon_visible" value="true" enable="1" />
+		<item name="ins_large_icon_displaypage" value="1,1,1" enable="1" />
+		<item name="ins_large_icon_size" value="100,100" enable="1" />
+		<item name="ins_large_icon_pos" value="0,-30" lrmargins="0,0" enable="1" />
+		<item name="ins_largetitle_txt" value="[SysLocal.ProductName]" enable="1" />
+		<item name="ins_largetitle_displaypage" value="1,1,1" enable="1" />
+		<item name="ins_largetitle_txtclr" value="0xFFFFFFFF" ftsize="24" bold="0" enable="1" />
+		<item name="ins_largetitle_visible" value="true" enable="1" />
+		<item name="ins_largetitle_ft" value="24" enable="1" />
+		<item name="ins_largetitle_pos" value="0,130" lrmargins="0,0" enable="1" />
+		<item name="ins_startins_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_startins_txtclr" value="0xFF000000" ftsize="17" bold="0" enable="1" />
+		<item name="ins_startins_ft" value="17" enable="1" />
+		<item name="ins_startins_showtxt" value="1" enable="1" />
+		<item name="ins_startins_txt" value="[SysLocal.StartInstallAction]" enable="1" />
+		<item name="ins_path_edit_txtclr" value="0xFF111111" ftsize="12" bold="0" enable="1" />
+		<item name="ins_path_edit_bkclr" value="0x00FFFFFF" enable="1" />
+		<item name="ins_path_edit_borderclr" value="0xFFD3D3D3" enable="1" />
+		<item name="ins_path_edit_borderhotclr" value="0xFF8EC1F0" enable="1" />
+		<item name="ins_path_edit_bkimage" value="" enable="1" />
+		<item name="ins_path_edit_readonly" value="0" enable="1" />
+		<item name="ins_path_editbtn_space" value="10" enable="1" />
+		<item name="ins_cleandir_strategy" value="0" enable="1" />
+		<item name="ins_path_padding" value="Ruanm/Ruanmtoolbox" enable="1" />
+		<item name="ins_seldirbtn_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_chkdesk_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_chkdesk_default" value="true" enable="1" />
+		<item name="ins_chkdesk_space" value="6" enable="1" />
+		<item name="ins_chkdesk_show" value="1" enable="1" />
+		<item name="ins_chkautorun_show" value="1" enable="1" />
+		<item name="ins_chkautorun_default" value="false" enable="1" />
+		<item name="ins_chkautorun_space" value="6" enable="1" />
+		<item name="ins_chkautorun_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_chkdeskautorun_space" value="30" enable="1" />
+		<item name="ins_chkagree_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_chkagree_default" value="false" enable="1" />
+		<item name="ins_chkagree_space" value="4" enable="1" />
+		<item name="ins_agreement_enable" value="0" enable="1" />
+		<item name="ins_agreement_txtclr" value="0xFF3882f0" ftsize="12" bold="0" enable="1" />
+		<item name="ins_show_custom_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_hide_custom_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_show_custom_txt" value="[SysLocal.CustomOptions]" enable="1" />
+		<item name="ins_hide_custom_txt" value="[SysLocal.CustomOptions]" enable="1" />
+		<item name="ins_customoptions_effect" value="0" enable="1" />
+		<item name="ins_customoptions_enable" value="1" enable="1" />
+		<item name="ins_diskspace_space" value="10" enable="1" />
+		<item name="ins_requiredspace_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_diskspace_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_seldirtitle_space" value="30" enable="1" />
+		<item name="ins_seldirtitle_txtclr" value="0xFF000000" ftsize="14" bold="0" enable="1" />
+		<item name="ins_seldirtitle_visible" value="true" enable="1" />
+		<item name="ins_diskspace_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_diskspace_visible" value="false" enable="1" />
+		<item name="ins_lcs_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="ins_lcs_bkimg" value="" enable="1" />
+		<item name="ins_lcs_ok_txtclr" value="0xFFFFFFFF" ftsize="12" bold="0" enable="1" />
+		<item name="ins_lcs_titleclr" value="0xFF000000" ftsize="14" bold="1" enable="1" />
+		<item name="ins_lcs_title_visible" value="true" enable="1" />
+		<item name="ins_lcs_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="ins_commandbox_type" value="0" enable="1" />
+		<item name="ins_langitem_selclr" value="0xFFb9d8fe" enable="1" />
+		<item name="ins_langitem_hotclr" value="0x99b9d8fe" enable="1" />
+		<item name="ins_langitem_txtclr" value="0xFF000000" ftsize="12" enable="1" />
+		<item name="ins_lang_txtclr" value="0xFFFFFFFF" ftsize="12" enable="1" />
+		<item name="ins_cmdbox_langspace" value="13" enable="1" />
+		<item name="ins_cmdbox_btnspace" value="1" enable="1" />
+		<item name="ins_install_bkimage" value="" enable="1" />
+		<item name="ins_installing_bkimage" value="" enable="1" />
+		<item name="ins_installed_bkimage" value="" enable="1" />
+		<item name="ins_float_custom_bkcolor" value="0x00FFFFFF" enable="0" />
+		<item name="ins_float_custom_bkimg" value="" enable="0" />
+		<item name="ins_installing_txtclr" value="0xFF000000" ftsize="13" bold="0" enable="1" />
+		<item name="ins_installingvalue_txtclr" value="0xFF000000" ftsize="13" bold="0" enable="1" />
+		<item name="ins_processtxt_align" value="0" enable="1" />
+		<item name="ins_processtxt_space" value="6" enable="1" />
+		<item name="ins_installing_txt_ft" value="13" enable="1" />
+		<item name="ins_installing_show_process" value="0" enable="1" />
+		<item name="ins_installing_processbar_pos" value="0,6" lrmargins="0,0" enable="1" />
+		<item name="ins_installing_processtxt_pos" value="0,21" lrmargins="0,0" enable="1" />
+		<item name="ins_insfinish_txtclr" value="0xFF000000" ftsize="17" bold="0" enable="1" />
+		<item name="ins_insfinish_txt_ft" value="17" enable="1" />
+		<item name="ins_insfinish_runbtn_txt" value="[SysLocal.RunAppAction]" enable="1" />
+		<item name="ins_insfinish_runbtn_showtxt" value="1" enable="1" />
+		<item name="ins_insfinish_runbtn_pos" value="0,-3" lrmargins="0,0" enable="1" />
+		<item name="ins_finishedtip_space" value="10" enable="1" />
+		<item name="ins_finishedtip_txtclr" value="0xFF000000" ftsize="20" bold="0" enable="1" />
+		<item name="ins_finishedtip_visible" value="false" enable="1" />
+		<item name="msg_bk_top" value="0xFF3574f0" enable="1" />
+		<item name="msg_frame_borderclr" value="0x00666666" enable="1" />
+		<item name="msg_frame_bkimage" value="" enable="1" />
+		<item name="msg_bkimage_aswinsize" value="0" enable="1" />
+		<item name="msg_top_height" value="37" enable="1" />
+		<item name="msg_bottom_height" value="40" enable="1" />
+		<item name="msg_win_size" value="340,180" enable="1" />
+		<item name="msg_content_style" value="0" enable="1" />
+		<item name="msg_show_icon" value="1" enable="1" />
+		<item name="msg_icontxt_space" value="10" enable="1" />
+		<item name="msg_buttons_space" value="15" enable="1" />
+		<item name="msg_btns_layout" value="0" enable="1" />
+		<item name="msg_bk_mid" value="0xFFFFFFFF" enable="1" />
+		<item name="msg_bk_bottom" value="0xFFE5EFF7" enable="1" />
+		<item name="msg_title_txtclr" value="0xFFFFFFFF" ftsize="12" bold="0" enable="1" />
+		<item name="msg_desc_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="msg_ok_txtclr" value="0xFFFFFFFF" ftsize="12" bold="0" enable="1" />
+		<item name="msg_cancel_txtclr" value="0xFF000000" ftsize="12" bold="0" enable="1" />
+		<item name="unins_langitem_selclr" value="0xFFb9d8fe" enable="1" />
+		<item name="unins_langitem_hotclr" value="0x99b9d8fe" enable="1" />
+		<item name="unins_langitem_txtclr" value="0xFF000000" ftsize="12" enable="1" />
+		<item name="unins_lang_txtclr" value="0xFFFFFFFF" ftsize="12" enable="1" />
+		<item name="unins_cmdbox_langspace" value="13" enable="1" />
+		<item name="unins_cmdbox_btnspace" value="1" enable="1" />
+		<item name="unins_win_size" value="500,340" enable="1" />
+		<item name="unins_frame_borderclr" value="0x00666666" enable="1" />
+		<item name="unins_bottom_height" value="110" enable="1" />
+		<item name="unins_uninstall_bkimage" value="unins_top_bg.png" enable="1" />
+		<item name="unins_uninstalling_bkimage" value="" enable="1" />
+		<item name="unins_uninstalled_bkimage" value="unins_uninstalled_top_bg.png" enable="1" />
+		<item name="unins_smalltitle_txtclr" value="0xFFFFFFFF" ftsize="14" bold="0" enable="1" />
+		<item name="unins_smalltitle_visible" value="true" enable="1" />
+		<item name="unins_smalltitle_ft" value="14" enable="1" />
+		<item name="unins_largetitle_txtclr" value="0xFFFFFFFF" ftsize="22" bold="0" enable="1" />
+		<item name="unins_largetitle_visible" value="true" enable="1" />
+		<item name="unins_largetitle_ft" value="22" enable="1" />
+		<item name="unins_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="unins_uninstalled_bottom_bkimg" value="" enable="1" />
+		<item name="unins_uninstalling_bottom_bkimg" value="" enable="1" />
+		<item name="unins_bottom_bkimg" value="" enable="1" />
+		<item name="unins_uninstalled_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="unins_uninstalling_bottom_bk" value="0xFFFFFFFF" enable="1" />
+		<item name="unins_startuninstall_txtclr" value="0xFFFFFFFF" ftsize="16" bold="0" enable="1" />
+		<item name="unins_startuninstall_ft" value="16" enable="1" />
+		<item name="unins_canceluninstall_txtclr" value="0xFF000000" ftsize="16" bold="0" enable="1" />
+		<item name="unins_canceluninstall_ft" value="16" enable="1" />
+		<item name="un_chkcleandata_show" value="false" enable="1" />
+		<item name="un_chkcleandata_txtclr" value="0xFF000000" ftsize="13" bold="0" enable="1" />
+		<item name="un_chkcleandata_space" value="4" enable="1" />
+		<item name="un_chkcleandata_default" value="false" enable="1" />
+		<item name="unins_clean_userfiles_checked" value="0" enable="1" />
+		<item name="unins_clean_userfiles" value="" enable="1" />
+		<item name="un_btns_space" value="40" enable="1" />
+		<item name="unins_uninstalling_txtclr" value="0xFF000000" ftsize="13" bold="0" enable="1" />
+		<item name="unins_uninstallingvalue_txtclr" value="0xFF000000" ftsize="13" bold="0" enable="1" />
+		<item name="unins_processtxt_align" value="0" enable="1" />
+		<item name="unins_processtxt_space" value="6" enable="1" />
+		<item name="unins_uninstalling_txt_ft" value="13" enable="1" />
+		<item name="unins_uninsfinish_txtclr" value="0xFFFFFFFF" ftsize="16" bold="0" enable="1" />
+		<item name="unins_uninsfinish_txt_ft" value="16" enable="1" />
+		<item name="unins_finish_largetitle_txtclr" value="0xFFFFFFFF" ftsize="22" bold="0" enable="1" />
+		<item name="unins_finish_largetitle_visible" value="true" enable="1" />
+		<item name="unins_finish_largetitle_txt" value="[SysLocal.UninstallationCompleted]" enable="1" />
+		<item name="unins_uninsfinish_txt" value="[SysLocal.Done]" enable="1" />
+		<item name="unins_canceluninstall_txt" value="[SysLocal.Cancel]" enable="1" />
+		<item name="unins_startuninstall_txt" value="[SysLocal.StartUninstallAction]" enable="1" />
+		<item name="unins_largetitle_txt" value="[SysLocal.ProductName]" enable="1" />
+		<item name="unins_smalltitle_txt" value="[SysLocal.ProductName] [SysLocal.UninstallerTitle]" enable="1" />
+		<item name="unins_smalltitle_displaypage" value="1,1,1" enable="1" />
+		<item name="unins_largetitle_displaypage" value="1,1,0" enable="1" />
+		<item name="ins_titlebar_pos" value="0,8" lrmargins="0,0" enable="1" />
+		<item name="ins_samlltitle_pos" value="0,16" lrmargins="0,0" enable="1" />
+		<item name="ins_inspath_pos" value="0,160" lrmargins="0,0" enable="1" />
+		<item name="ins_dskshortcut_pos" value="0,240" lrmargins="0,0" enable="1" />
+		<item name="ins_floatcustom_close_pos" value="0,240" lrmargins="0,0" enable="0" />
+		<item name="ins_floatcustom_pos" value="0,0" lrmargins="0,0" enable="0" />
+		<item name="ins_agreelicence_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_lcs_btns_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_lcs_title_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_lcs_content_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_lcs_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="ins_finishedtip_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="msg_titlebar_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="msg_cxt_pos" value="0,0" lrmargins="25,25" enable="1" />
+		<item name="msg_btns_pos" value="0,0" lrmargins="25,25" enable="1" />
+		<item name="un_titlebar_pos" value="0,8" lrmargins="0,0" enable="1" />
+		<item name="un_samlltitle_pos" value="24,16" lrmargins="0,0" enable="1" />
+		<item name="un_largetitle_pos" value="0,140" lrmargins="0,0" enable="1" />
+		<item name="un_uninsbtns_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="un_processbar_pos" value="0,-24" lrmargins="0,0" enable="1" />
+		<item name="un_processtxt_pos" value="0,20" lrmargins="0,0" enable="1" />
+		<item name="un_finishbtn_pos" value="0,0" lrmargins="0,0" enable="1" />
+		<item name="un_finish_largetitle_pos" value="0,140" lrmargins="0,0" enable="1" />
+		<item name="un_show_uninstall_tip" value="1" enable="1" />
+		<item name="un_check_mainexe" value="1" enable="1" />
+		<item name="un_kill_mainexe" value="0" enable="1" />
+	</component>
+	<component cid="com.installer.resfiles" type="common" upgrade="1">
+		<item name="ins_res_custom_show" value="custom_show.png" deletable="false" />
+		<item name="ins_res_custom_hide" value="custom_hide.png" deletable="false" />
+		<item name="ins_res_checkbox_checked" value="checkbox_checked.png" deletable="false" />
+		<item name="ins_res_checkbox_unchecked" value="checkbox_unchecked.png" deletable="false" />
+		<item name="ins_res_btn_seldir" value="btn_seldir.png" deletable="false" />
+		<item name="ins_res_btn_lcs_ok" value="btn_lcs_ok.png" deletable="false" />
+		<item name="ins_res_logo" value="logo.ico" deletable="false" />
+		<item name="ins_res_uninst" value="uninst.ico" deletable="false" />
+		<item name="ins_res_process_bottom" value="process_bottom.png" deletable="false" />
+		<item name="ins_res_process_top" value="process_top.png" deletable="false" />
+		<item name="ins_res_startappbtn" value="btn_startapp.png" deletable="false" />
+		<item name="ins_res_startinstallbtn" value="btn_startinstall.png" deletable="false" />
+		<item name="ins_res_btn_close" value="btn_close.png" deletable="false" />
+		<item name="ins_res_btn_min" value="btn_min.png" deletable="false" />
+		<item name="ins_res_lang_arrow" value="lang_arrow.png" deletable="false" />
+		<item name="ins_res_finished_icon" value="icon_install_finish.png" deletable="false" />
+		<item name="msg_res_ok_btn" value="msg_ok_btn.png" deletable="false" />
+		<item name="msg_res_cancel_btn" value="msg_cancel_btn.png" deletable="false" />
+		<item name="msg_res_btn_close" value="msg_btn_close.png" deletable="false" />
+		<item name="msg_res_icon_error" value="msg_error.png" deletable="false" />
+		<item name="msg_res_icon_info" value="msg_info.png" deletable="false" />
+		<item name="msg_res_icon_warn" value="msg_warn.png" deletable="false" />
+		<item name="ins_res_top_bk" value="top_bg.png" deletable="true" />
+		<item name="ins_res_install_top_bk" value="install_top_bg.png" deletable="true" />
+		<item name="ins_res_installing_top_bk" value="installing_top_bg.png" deletable="true" />
+		<item name="ins_res_installed_top_bk" value="installed_top_bg.png" deletable="true" />
+		<item name="unins_res_btn_close" value="unins_btn_close.png" deletable="false" />
+		<item name="unins_res_btn_min" value="unins_btn_min.png" deletable="false" />
+		<item name="unins_res_btn_cancel" value="unins_btn_cancel.png" deletable="false" />
+		<item name="unins_res_btn_finish" value="unins_btn_finish.png" deletable="false" />
+		<item name="unins_res_btn_start" value="unins_btn_start.png" deletable="false" />
+		<item name="unins_res_process_bottom" value="unins_process_bottom.png" deletable="false" />
+		<item name="unins_res_process_top" value="unins_process_top.png" deletable="false" />
+		<item name="unins_res_lang_arrow" value="unins_lang_arrow.png" deletable="false" />
+		<item name="unins_res_top_bg" value="unins_top_bg.png" deletable="true" />
+		<item name="unins_res_uninstalling_top_bg" value="unins_uninstalling_top_bg.png" deletable="true" />
+		<item name="unins_res_uninstalled_top_bg" value="unins_uninstalled_top_bg.png" deletable="true" />
+		<item name="ins_res_lang_bk" value="lang_bk.png" deletable="false" />
+		<item name="ins_res_lang_drop_bk" value="lang_drop_bk.png" deletable="false" />
+		<item name="unins_res_lang_bk" value="unins_lang_bk.png" deletable="false" />
+		<item name="unins_res_lang_drop_bk" value="unins_lang_drop_bk.png" deletable="false" />
+		<item name="un_res_checkbox_checked" value="unins_checkbox_checked.png" deletable="false" />
+		<item name="un_res_checkbox_unchecked" value="unins_checkbox_unchecked.png" deletable="false" />
+	</component>
+	<component cid="com.installer.applocals" type="custom" upgrade="1">
+		<item name="en">
+			<tr source="[SysLocal.ProductName]" translation="Ruanmtoolbox" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="License terms and conditions" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="zh_CN">
+			<tr source="[SysLocal.ProductName]" translation="阮铭泽工具箱" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="《用户许可协议》" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="zh_TW">
+			<tr source="[SysLocal.ProductName]" translation="產品名稱" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="《用戶許可協議》" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="ru">
+			<tr source="[SysLocal.ProductName]" translation="Название продукта" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="Лицензионное соглашение" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="ja">
+			<tr source="[SysLocal.ProductName]" translation="アプリ名" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="ライセンス契約" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="ko">
+			<tr source="[SysLocal.ProductName]" translation="제품 이름" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="사용자 라이센스 계약" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="fr">
+			<tr source="[SysLocal.ProductName]" translation="Nom de l'application" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="Contrat de licence" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="de">
+			<tr source="[SysLocal.ProductName]" translation="App-Name" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="Lizenzvereinbarung" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="es">
+			<tr source="[SysLocal.ProductName]" translation="Nombre de la aplicación" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="Acuerdo de licencia" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+		<item name="ita">
+			<tr source="[SysLocal.ProductName]" translation="Nome del prodotto" />
+			<tr source="[SysLocal.LicenseAgreement]" translation="Termini e condizioni della licenza" />
+			<tr source="[SysLocal.LicenseAgreement1]" translation="" />
+			<tr source="[SysLocal.LicenseAgreement2]" translation="" />
+			<tr source="[SysLocal.File.License]" translation="" />
+			<tr source="[SysLocal.File.License1]" translation="" />
+			<tr source="[SysLocal.File.License2]" translation="" />
+			<tr source="[Local.Text1]" translation="Text1" />
+		</item>
+	</component>
+	<component cid="com.installer.requirements" type="common" upgrade="0" />
+	<component cid="com.installer.registry" type="common" upgrade="0" />
+	<component cid="com.installer.shortcuts" type="common" upgrade="0">
+		<item name="Shortcut0" type="lnk" location="desktop" subpath="" displayname="" file="" />
+	</component>
+	<component cid="com.installer.systempaths" type="common" upgrade="0" />
+	<component cid="com.installer.unins.cleanup" type="common" upgrade="0">
+		<item name="unins_cleanup0" file="" argvs="" timeout="60" />
+	</component>
+</installer>

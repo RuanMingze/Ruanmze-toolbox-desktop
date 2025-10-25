@@ -16,7 +16,10 @@
       "output": "dist"
     },
     "win": {
-      "target": ["nsis", "zip"],
+      "target": [
+        "nsis",
+        "zip"
+      ],
       "icon": "icon.jpg"
     },
     "nsis": {
@@ -55,6 +58,6 @@
     "electron-packager": "^17.1.2"
   },
   "dependencies": {
-    "systeminformation": "^5.27.10"
+    "systeminformation": "^5.27.11"
   }
 }

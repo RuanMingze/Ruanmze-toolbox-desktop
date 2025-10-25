@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs_vista.db
+
+# Windows
+*.dll
+*.exe
+*.pdb
+*.lib
+*.obj
+*.ilk
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+dist/
+*.zip
+*.exe
+*.msi
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cache
+.cache/
+*.cache
+
+# User data
+users.json
+Cookie.json

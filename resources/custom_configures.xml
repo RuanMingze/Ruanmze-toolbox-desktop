@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<installer>
+	<component cid="com.installer.customconfigures" type="common" upgrade="1" />
+</installer>

@@ -4,12 +4,14 @@ const path = require('path');
 // 禁用安全警告
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
+let mainWindow;
+
 // 创建浏览器窗口
 const createWindow = () => {
   // 根据系统主题设置初始背景色
   const backgroundColor = nativeTheme.shouldUseDarkColors ? '#121220' : '#f5f7fa';
   
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
     minWidth: 800,
@@ -32,32 +34,13 @@ const createWindow = () => {
   // 移除菜单栏
   mainWindow.setMenu(null);
   
-  // 禁用开发者工具自动打开
-  // if (!app.isPackaged) {
-  //   mainWindow.webContents.openDevTools();
-  // }
+  // 禁止开发者工具
+  // mainWindow.webContents.openDevTools();
   
   // 监听系统主题变化
   nativeTheme.on('updated', () => {
     // 当系统主题变化时，通知渲染进程
     mainWindow.webContents.send('system-theme-changed', nativeTheme.shouldUseDarkColors ? 'dark' : 'light');
-  });
-  
-  // 监听窗口控制事件
-  ipcMain.on('window-minimize', () => {
-    mainWindow.minimize();
-  });
-  
-  ipcMain.on('window-maximize', () => {
-    if (mainWindow.isMaximized()) {
-      mainWindow.unmaximize();
-    } else {
-      mainWindow.maximize();
-    }
-  });
-  
-  ipcMain.on('window-close', () => {
-    mainWindow.close();
   });
   
   // 监听窗口状态变化
@@ -68,7 +51,36 @@ const createWindow = () => {
   mainWindow.on('unmaximize', () => {
     mainWindow.webContents.send('window-unmaximized');
   });
+  
+  // 监听窗口关闭事件，直接关闭窗口
+  mainWindow.on('close', (event) => {
+    // 允许窗口关闭
+    mainWindow.destroy();
+  });
 };
+
+// 监听窗口控制事件
+ipcMain.on('window-minimize', () => {
+  if (mainWindow) {
+    mainWindow.minimize();
+  }
+});
+
+ipcMain.on('window-maximize', () => {
+  if (mainWindow) {
+    if (mainWindow.isMaximized()) {
+      mainWindow.unmaximize();
+    } else {
+      mainWindow.maximize();
+    }
+  }
+});
+
+ipcMain.on('window-close', () => {
+  if (mainWindow) {
+    mainWindow.destroy(); // 直接销毁窗口，不触发二次确认
+  }
+});
 
 // 这段代码会等到 Electron 初始化完成后再执行
 app.whenReady().then(() => {
@@ -83,4 +95,9 @@ app.whenReady().then(() => {
 // 除了 macOS 外，当所有窗口都被关闭的时候退出程序
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
+});
+
+// 监听窗口关闭事件，直接退出应用
+app.on('before-quit', (event) => {
+  // 不阻止退出
 });
